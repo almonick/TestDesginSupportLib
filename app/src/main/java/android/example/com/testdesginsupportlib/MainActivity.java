@@ -1,13 +1,17 @@
 package android.example.com.testdesginsupportlib;
 
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.support.v7.widget.Toolbar;
 
@@ -16,7 +20,13 @@ import android.support.v7.widget.Toolbar;
 public class MainActivity extends AppCompatActivity {
 
     Toolbar mToolbar;
+    TabLayout mTabLayout;
+    AppBarLayout mAppBarlaout;
+
+
     private CoordinatorLayout mRootLayout;
+    private CollapsingToolbarLayout mCollapsingToolbarLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,8 +34,12 @@ public class MainActivity extends AppCompatActivity {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
 
-
         mRootLayout = (CoordinatorLayout) findViewById(R.id.root_layout);
+        mCollapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbarLayout);
+        mCollapsingToolbarLayout.setTitle("Support Design Lib");
+
+
+       // initTab();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +54,18 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void initTab() {
+        mTabLayout = null;// (TabLayout) findViewById(R.id.tab_layout);
+        if(mTabLayout == null) return;
+        mTabLayout.setVisibility(View.VISIBLE);
+        mTabLayout.addTab(mTabLayout.newTab().setText("Tab A"), true);
+        mTabLayout.addTab(mTabLayout.newTab().setText("Tab B"));
+        mTabLayout.addTab(mTabLayout.newTab().setText("Tab C"));
+        mTabLayout.addTab(mTabLayout.newTab().setText("Tab D"));
+       //mTabLayout.setupWithViewPager(mViewPager);
+
     }
 
     @Override
