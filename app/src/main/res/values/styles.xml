@@ -18,8 +18,8 @@
         <item name="android:textColor">#00000000</item>
     </style>
 
-    <style name="GreyText" parent="@android:style/TextAppearance">
-        <item name="android:textColor">#666666</item>
+    <style name="YelloText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#ffff00</item>
     </style>
 
     <style name="AccentText" parent="@android:style/TextAppearance">
@@ -30,7 +30,7 @@
         <item name="android:textSize">30sp</item>
     </style>
 
-    <style name="GreyText.Big">
+    <style name="YelloText.Big">
         <item name="android:textSize">30sp</item>
     </style>
 </resources>

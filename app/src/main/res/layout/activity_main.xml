@@ -23,14 +23,21 @@
                 android:layout_width="match_parent"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 app:expandedTitleMarginStart="64dp"
-                app:expandedTitleTextAppearance="@style/AccentText.Big"
+                app:expandedTitleTextAppearance="@style/YelloText.Big"
                 >
+
+                <ImageView android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/header"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax"
+                    />
 
                 <android.support.v7.widget.Toolbar
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
-                    android:background="?attr/colorPrimary"
+
                     android:minHeight="?attr/actionBarSize"
                     app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
