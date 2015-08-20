@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="all">
+    <group android:checkableBehavior="single">
         <item
-            android:id="@+id/navItem1"
+            android:id="@+id/navItemHome"
             android:icon="@drawable/ic_action_location_found_dark"
+            android:checked="true"
             android:title="Home"/>
         <item
-            android:id="@+id/navItem2"
+            android:id="@+id/navItemInbox"
             android:icon="@drawable/ic_action_location_found_dark"
-            android:title="Blog"/>
+            android:title="Inbox"/>
 
         <item
-            android:id="@+id/navItem3"
-            android:icon="@drawable/ic_action_location_found_dark"
-            android:title="About"/>
-
-        <item
-            android:id="@+id/navItem4"
+            android:id="@+id/navItemContact"
             android:icon="@drawable/ic_action_location_found_dark"
             android:title="Contact"/>
     </group>

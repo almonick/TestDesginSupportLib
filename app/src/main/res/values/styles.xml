@@ -2,9 +2,10 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">#2196F3</item>
-        <item name="colorPrimaryDark">#1565C0</item>
-        <item name="colorAccent">#E91E63</item>
+        <item name="colorPrimary">@color/PrimaryColor</item>
+        <item name="colorPrimaryDark">@color/PrimaryDarkColor</item>
+        <item name="colorAccent">@color/PrimaryAccentColor</item>
+        <item name="android:textColorPrimary">@android:color/primary_text_light</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

@@ -24,6 +24,6 @@
         android:layout_gravity="bottom"
         android:layout_margin="16dp"
         android:text="nuuneoi"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
 </FrameLayout>
