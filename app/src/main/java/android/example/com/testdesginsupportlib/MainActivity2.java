@@ -1,6 +1,8 @@
 package android.example.com.testdesginsupportlib;
 
-import android.content.res.ColorStateList;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
@@ -13,18 +15,14 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewAnimationUtils;
-import android.widget.Button;
-import android.widget.FrameLayout;
-import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
 
     Toolbar mToolbar;
     TabLayout mTabLayout;
@@ -36,10 +34,15 @@ public class MainActivity extends AppCompatActivity {
     private CoordinatorLayout mRootLayout;
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
 
+    public static void newIntent(Context context){
+	    Intent intent = new Intent(context, MainActivity2.class);
+	    context.startActivity(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         mNavigationView = (NavigationView) findViewById(R.id.navigation_drawer);
         mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -107,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(mRootLayout, "Hello SanckBar", Snackbar.LENGTH_LONG).setAction("Undo", new View.OnClickListener() {
+                Snackbar.make(mRootLayout, "Hello SanckBar", Snackbar.LENGTH_INDEFINITE).setAction("Undo", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
@@ -117,21 +120,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-	    findViewById(R.id.btn_main2).setOnClickListener(new View.OnClickListener() {
-		    @Override
-		    public void onClick(View v) {
-			    startMain2();
-		    }
-	    });
-
        // fab.setBackgroundTintList(getColorStateList(R.color.fab_bg));  not sure how to make it work so fab will hold color state list different then default
 
 
     }
-
-	private void startMain2(){
-		//MainActivity2.newIntent(this);
-	}
 
     private void initTab() {
         mTabLayout = null;// (TabLayout) findViewById(R.id.tab_layout);

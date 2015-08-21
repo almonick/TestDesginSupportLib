@@ -13,6 +13,22 @@
             android:title="Inbox"/>
 
         <item
+            android:id="@+id/section"
+            android:title="Sub Section">
+            <menu>
+                <item
+                    android:id="@+id/drawer_favourite"
+                    android:icon="@drawable/ic_file_download_black_48dp"
+                    android:title="favourite"/>
+
+                <item
+                    android:id="@+id/drawer_downloaded"
+                    android:icon="@drawable/ic_file_download_black_48dp"
+                    android:title="downloaded"/>
+            </menu>
+        </item>
+
+        <item
             android:id="@+id/navItemContact"
             android:icon="@drawable/ic_action_location_found_dark"
             android:title="Contact"/>
